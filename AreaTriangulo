@@ -1,0 +1,39 @@
+En C++:
+
+// AreaTriangulo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	float b, h, A;
+	cout<<"Saludos, este programa calcula el area de un triangulo."<<endl;
+	cout<<"Aun esta en version alpha, asi que disculpas por los errores o bugs que puedan ocurrir."<<endl;
+	cout<<"Ingresa la medida de la base de tu triangulo en centimetros: "<<endl;
+	cin>>b;
+	cout<<"Ahora, ingresa su altura en centimetros: "<<endl;
+	cin>>h;
+	A=(b*h)/2;
+	cout<<"El area de tu triangulo es:"<<endl;
+	cout<<A<< " centimetros cuadrados";
+	getch();
+}
+
+------------------------------------------------------
+Pseudocodigo (PSeInt):
+
+Algoritmo AreaTriangulo
+	Escribir "Este programa puede calcular el area de un triangulo";
+	Escribir "Ahora, escribe la medida de la base de tu triangulo";
+	Leer b;
+	Escribir "A continuacion, escribe la medida de la altura de tu triangulo:";
+	Leer h;
+	A<-(b*h)/2;
+	Escribir "El area de tu triangulo es:";
+	Escribir A " centimetros cuadrados";
+	
+FinAlgoritmo
