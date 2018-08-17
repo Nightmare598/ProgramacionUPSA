@@ -1,0 +1,36 @@
+En C++
+
+// AreaCirculo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float r, A, pi=3.141592;
+	cout<<"Saludos, este es un programa para calcular el area de un circulo."<<endl;
+	cout<<"Aun esta en fase alpha, asi que lamentamos cualquier error o bug que pueda aparecer"<<endl;
+	cout<<"Ingresa el radio de tu circulo en centimetros:"<<endl;
+	cin>>r;
+	A=r*r*pi;
+	cout<<"El area de tu circulo es de:"<<endl;
+	cout<<A<<" centimetros cuadrados";
+	getch();
+}
+
+--------------------------------------------------------------------
+
+Pseudocodigo (PSeInt):
+
+Algoritmo AreaCirculo
+	Escribir "Este programa puede calcular el area de un circulo";
+	Escribir "A continuacion, coloca la medida del radio de tu circulo en centimetros:";
+	Leer r;
+	A<-r*r*3.141592;
+	Escribir "El area de tu circulo es:";
+	Escribir A " centimetros cuadrados";
+FinAlgoritmo
