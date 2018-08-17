@@ -1,0 +1,41 @@
+En C++
+
+// AreaParalelogramo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float b, h, A;
+	cout<<"Saludos, este es el programa para calcular el area de un paralelogramo."<<endl;
+	cout<<"Aun se encuentra en fase alpha, asi que pido disculpas por cualquier error o bug que pueda ocurrir."<<endl;
+	cout<<"Ingresa la medida de la base de tu paralelogramo en centimetros: "<<endl;
+	cin>>b;
+    cout<<"Ahora, ingresa su altura, en centimetros: "<<endl;
+	cin>>h;
+	A=b*h;
+	cout<<"El area de tu paralelogramo es de: "<<endl;
+	cout<< A <<" centimetros cuadrados";
+	getch();
+}
+
+-----------------------------------------------
+
+Pseudocodigo (PSeInt):
+
+Algoritmo AreaParalelogramo
+	Escribir "Este programa puede calcular el area de un paralelogramo:";
+	Escribir "Ahora, escribe la medida de la base de tu paralelogramo en centimetros:";
+	Leer b;
+	Escribir "Ahora, escribe la medida de la altura de tu paralelogramo en centimetros:";
+	Leer h;
+	A<-b*h;
+	Escribir "El area de tu paralelogramo es de:";
+	Escribir A " centimetros cuadrados";
+	
+FinAlgoritmo
