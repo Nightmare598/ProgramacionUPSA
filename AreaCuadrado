@@ -1,0 +1,38 @@
+En C++
+
+// AreaCuadrado.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+void main ()
+
+{
+	float l;
+	float A;
+	cout<<"Saludos, iniciaste el programa para calcular el area de un cuadrado."<<endl;
+	cout<<"Ten en cuenta que es un programa en fase alpha, asi que lamento cualquier inconveniente o bug que pueda presentar"<<endl;
+	cout<<"A continuacion, escribe la medida del lado del cuadrado en centimetros: "<<endl;
+	cin>>l;
+	A=l*l;
+	cout<<"El area de tu cuadrado es de:"<<endl;
+	cout<<A<<" centimetros cuadrados";
+
+	getch();
+}
+
+--------------------------------------------------------
+Pseudocodigo (PSeInt):
+
+Algoritmo AreaCuadrado
+	Escribir "Este programa puede calcular el area de un cuadrado";
+	Escribir "Ahora, coloca la medida del lado en centimetros: ";
+	Leer l;
+	A<-l*l;
+	Escribir "La medida del area de tu cuadrado es de:";
+	Escribir A " centimetros cuadrados";
+FinAlgoritmo
