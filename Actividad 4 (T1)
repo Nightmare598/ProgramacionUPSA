@@ -1,0 +1,52 @@
+C++
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main ()
+{
+	float x1, y1, x2, y2, Y, X, dist;
+	cout<<"Saludos usuario, este programa calcula la distancia entre dos puntos de un plano."<<endl;
+	cout<<"Ahora, escribe la posicion del primer punto: "<<endl;
+	cout<<"Posicion en X: ";
+    cin>>x1;
+	cout<<"Posicion en Y: ";
+	cin>>y1;
+	cout<<"Ahora, escribe la posicion del segundo punto: "<<endl;
+	cout<<"Posicion en X: ";
+	cin>>x2;
+	cout<<"Posicion en Y: ";
+	cin>>y2;
+	Y=y2-y1;
+	X=x2-x1;
+	dist=sqrt(pow(Y,2)+pow(X,2));
+	cout<<"La distancia que existe entre los dos puntos es de: "<<dist<< " unidades"<<endl;
+	cout<<"Gracias por usar este programa, pulsa cualquier tecla para salir"<<endl;
+
+	getch();
+}
+
+----------------------------------------------------------------------------------------------------------
+Pseudocodigo (PSeInt):
+
+Algoritmo Actividad4
+	Escribir "Saludos usuario, con este programa podras calcular la distancia entre dos puntos en un plano.";
+	Escribir "Ingresa la posicion de tu primer punto: ";
+	Escribir "Posicion en X";
+	Leer X1;
+	Escribir "Posicion en Y";
+	Leer Y1;
+	Escribir "Ingresa la posicion de tu segundo punto: ";
+	Escribir "Posicion en X";
+	Leer X2;
+	Escribir "Posicion en Y";
+	Leer Y2;
+	Dist<-Raiz((Y2-Y1)^2+(X2-X1)^2);
+	Escribir "La distancia entre los dos puntos es de: ";
+	Escribir Dist," unidades";
+  Escribir "Gracias por usar este programa, pulsa Enter para salir.";
+FinAlgoritmo
