@@ -1,0 +1,42 @@
+C++
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "Math.h"
+
+using namespace std;
+
+
+void main()
+{
+	float r, P, A, pi=3.141592;
+	cout<<"Saludos usuario, este programa calcula el area y perimetro de tu circunferencia."<<endl;
+	cout<<"Ingresa el radio de tu circunferencia en centimetros: "<<endl;
+	cin>>r;
+	A=pi*pow(r,2);
+	P=2*pi*r;
+	cout<<"El area de tu circunferencia es: "<<A<< " centimetros cuadrados"<<endl;
+	cout<<"Y su perimetro es: "<<P<< " centimetros"<<endl;
+	cout<<"Gracias por usar este programa, hasta luego."<<endl;
+	cout<<"Presione cualquier tecla para salir."<<endl;
+		getch();
+    }
+    
+
+-----------------------------------------------------------------------------------------------------------
+Pseudocodigo (PSeInt):
+
+Algoritmo Actividad2
+	Escribir "Saludos usuario, con este programa podras calcular el area y perimetro de tu circunferencia.";
+	Escribir "Ahora, escribe el radio de tu circunferencia en centimetros:";
+	Leer r;
+	A<-r*r*3.141592;
+	P<-2*r*3.141592;
+	Escribir "El perimetro de tu circunferencia es de: ";
+	Escribir  P, " centimetros.";
+	Escribir "El area de tu circunferencia es de: ";
+	Escribir  A, " centimetros cuadrados";
+	Escribir "Gracias por usar este programa, pulsa cualquier tecla para salir.";
+	
+FinAlgoritmo
