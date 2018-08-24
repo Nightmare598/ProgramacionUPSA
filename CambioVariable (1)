@@ -1,0 +1,48 @@
+C++:
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main ()
+{
+	int A, B, C;
+	cout<<"Saludos usuario, este programa intercambia los datos que usted asigne."<<endl;
+	cout<<"Ingrese el dato A: "<<endl;
+	cin>>A;
+	cout<<"Ahora, ingrese el dato B: "<<endl;
+	cin>>B;
+	cout<<"El valor de A es: "<<A<<endl;
+	cout<<"El valor de B es: "<<B<<endl;
+	cout<<"Ahora, con un poco de magia, intercambiamos los valores y..."<<endl;
+	C=A;
+	A=B;
+	B=C;
+	cout<<"Ahora, el valor de A es: "<<A<<endl;
+	cout<<"Y el valor de B es: "<<B<<endl;
+	cout<<"Gracias, presione cualquier tecla para salir."<<endl;
+	getch();
+	return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------------
+Pseudocodigo (PSeInt):
+
+Algoritmo Actividad1
+	Escribir "Saludos usuario, este programa intercambia los datos que ingreses";
+	Escribir "Ingresa el valor de A";
+	Leer A;
+	Escribir "Ingresa el valor de B";
+	Leer B;
+	Escribir "Ahora, con un poco de magia, intercambiamos las variables y...";
+	C <- A;
+	A <- B;
+	B <- C;
+	Escribir "El dato de A es: ",A;
+	Escribir "El dato de B es: ",B;
+	Escribir "Gracias por usar este programa, presione cualquier tecla para salir.";
+FinAlgoritmo
+
