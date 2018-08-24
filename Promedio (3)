@@ -1,0 +1,47 @@
+C++
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float A, Prom=0;
+	cout<<"Saludos usuario, este programa te permitira calcular el promedio de 5 numeros que ingreses."<<endl;
+	cout<<"Ingresa tus valores, uno por uno: "<<endl;
+	cin>>A;
+	Prom=Prom+A;
+	cin>>A;
+	Prom=Prom+A;
+	cin>>A;
+	Prom=Prom+A;
+	cin>>A;
+	Prom=Prom+A;
+	cin>>A;
+	Prom=Prom+A;
+	cout<<"El promedio de los 5 datos ingresados es: "<<Prom/5<<endl;
+	cout<<"Gracias por usar este programa, pulsa cualquier tecla para salir."<<endl;
+	getch();
+	
+}
+-------------------------------------------------------------------------------------------
+Pseudocodigo (PSeInt):
+
+Algoritmo Actividad3
+	Escribir "Saludos usuario, con este programa podras calcular el promedio de 5 numeros que ingreses.";
+	Escribir "Ahora, ingresa tus datos, uno por uno: ";
+	Leer A;
+	Prom<-Prom+A;
+	Leer A;
+	Prom<-Prom+A;
+	Leer A;
+	Prom<-Prom+A;
+	Leer A;
+	Prom<-Prom+A;
+	Leer A;
+	Prom<-Prom+A;
+	Escribir "El promedio de los cinco numeros ingresados es: ", Prom/5;
+	Escribir "Gracias por usar este programa, pulsa cualquier tecla para salir.";
+FinAlgoritmo
