@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	float Salario;
+	char resp;
+	cout<<"Saludos usuario, con este programa podras calcular cuanto ganan en realidad tus trabajadores."<<endl;
+	do{
+	cout<<"Ingrese el salario que gana su trabajador: "<<endl;
+	cin>>Salario;
+		if(Salario>=2060 && Salario<=8240)
+			cout<<"El salario neto que gana su trabajador es: "<<Salario*0.8729<<endl;
+		else
+			if(Salario>=8240)
+				cout<<"El salario neto que gana su trabajador es: "<<Salario*0.7429<<endl;
+			else
+				cout<<"No puede pagar un monto inferior al salario minimo nacional"<<endl;
+	cout<<"¿Desea hacer otro calculo? S/N: ";
+	cin>>resp;
+	}while(resp=='S');
+	cout<<"Gracias por usar el programa, pulsa enter para salir.";
+	getch();
+}
