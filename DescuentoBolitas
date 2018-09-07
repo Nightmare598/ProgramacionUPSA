@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main(){
+	int numbolitas;
+	float Preciototal, totalapagardcto;
+	char resp;
+	do{
+	//Validar la entrada
+	do {
+		cout<<"Ingresar numero de bolita: ";
+		cin>>numbolitas;
+	}while (numbolitas<0); //!(numcamisas>=0)
+	
+	do {
+		cout<<"Ingresar el precio de la camisa: ";
+		cin>>Preciototal;
+	}while (Preciototal<=0);
+	//Determinar descuento
+	if (numbolitas==2)
+		cout<<"El precio total con descuento es: "<<Preciototal<<endl;
+	else
+		if (numbolitas==4)
+		cout<<"El precio total con descuento es: "<<Preciototal*0.95<<endl;
+	else
+		if (numbolitas==6)
+		cout<<"El precio total con descuento es: "<<Preciototal*0.8<<endl;
+	else
+		if (numbolitas==8)
+		cout<<"El precio total con descuento es: "<<Preciototal*0.5<<endl;
+		else
+			cout<<"Error numero de bolita no considerado"<<endl;
+	cout<<"Deseas hacer otro calculo? S/N"<<endl;
+	cin>>resp;
+	}while (resp=='S');
+	cout<<"Gracias por usar este programa, pulsa cualquier tecla para salir.";
+	getch();
+}
