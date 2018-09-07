@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main(){
+	int numcamisas;
+	float Preciototal, totalapagardcto;
+	//Validar la entrada
+	do {
+		cout<<"Ingresar numero de camisas: ";
+		cin>>numcamisas;
+	}
+	while (numcamisas<0); //!(numcamisas>=0)
+	do {
+		cout<<"Ingresar el precio de la camisa: ";
+		cin>>Preciototal;
+	}
+	while (Preciototal<=0);
+	//Determinar descuento
+	if (numcamisas<=5)
+		totalapagardcto=numcamisas*Preciototal*0.7;
+	else
+		totalapagardcto=numcamisas*Preciototal*0.8;
+	cout<<"El total a pagar con descuento es: "<<totalapagardcto;
+	getch();
+}
