@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+//Prototipo
+float discriminante (float a, float b, float c);
+void reales (float a, float b, float c, float &x1, float &x2);
+void unica (float a, float b, float c, float &f1);
+void imaginaria (float a, float b, float c, float &i1, float &i2);
+//& son variables por referencia, es decir que cambian de valor en la funcion porque son punteros en las varaibles que lo llaman
+void main(){
+	float a, b, c, valor1, valor2, valor3, d;
+	cout<<"Ingrese los valores de a, b y c:"<<endl;
+	cin>>a>>b>>c;
+	d=discriminante(a, b, c);
+	if (d>0){
+		reales(a, b, c, valor1, valor2); //cuando la funcion no devuelve nada - void
+		cout<<"Raiz 1: "<<valor1<<endl;
+		cout<<"Raiz 2: "<<valor2<<endl;
+	}
+	else if (d==0){
+		unica(a, b, c, valor3);
+		cout<<"La unica solucion es: "<<valor3<<endl;
+	}
+	else
+		cout<<"No son reales"<<endl;
+	getch();
+}
+
+float discriminante (float a, float b, float c){
+	float s;
+	s=pow(b,2)-(4*a*c);
+	return s;			//Se debe devolver ya que es con float
+}
+
+void reales (float a, float b, float c, float &x1, float &x2){
+	x1=(-b+sqrt((b*b)-(4*a*c)))/(2*a);
+	x2=(-b-sqrt((b*b)-(4*a*c)))/(2*a);
+}
+void unica (float a, float b, float c, float &f1){
+	f1=(-b)/(2*a);
+}
