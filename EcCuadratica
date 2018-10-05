@@ -1,0 +1,39 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main(){
+	float a, b, c, D, X, X1, X2;
+	char r;
+	do{
+		cout<<"Ingresa los coeficientes de la ecuacion cuadrativa: "<<endl;
+		cout<<"Coeficiente de X cuadrado: ";
+		cin>>a;
+		cout<<"Coeficiente de X: ";
+		cin>>b;
+		cout<<"Termino independiente: ";
+		cin>>c;
+		D=pow(b,2)-4*a*c;
+		if (D==0){
+			X=((-1*b)+sqrt(D))/(2*a);
+		cout<<"La raiz de tu ecuacion cuadratica es: "<<endl;
+		cout<<"X= "<<X<<endl;
+		}
+		else if (D>0){
+			X1=((-1*b)+sqrt(D))/(2*a);
+			X2=((-1*b)-sqrt(D))/(2*a);
+		cout<<"Las raices de tu ecuacion cuadratica son: "<<endl;
+		cout<<"X1= "<<X1<<endl;
+		cout<<"X2= "<<X2<<endl;
+		}
+		else if (D<0)
+			cout<<"La raiz o raices de tu ecuacion cuadratica son imaginarias."<<endl;
+
+		cout<<"Desea volver a calcular una ecuacion? S/N"<<endl;
+		cin>>r;
+	}while (r=='S');
+	cout<<"Gracias por usar el programa, pulsa Enter para salir"<<endl;
+	getch();
+}
