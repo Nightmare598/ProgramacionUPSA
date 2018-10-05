@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+int potencia (int n);
+void main(){
+	int n, s=0;
+	cout<<"Ingrese el limite de la serie: "<<endl;
+	cin>>n;
+	s=potencia(n);
+	cout<<"El resultado de la suma de los cuadrados de la serie es: "<<s<<endl;
+	getch();
+}
+
+int potencia (int n){
+	int s=0;
+	for (int i=1; i<=n; i++){
+		s=s+(i*i);
+	}
+	return s;
+}
