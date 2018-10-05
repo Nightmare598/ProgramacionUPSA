@@ -1,0 +1,24 @@
+//By Sebastian Morales (Nightmare598)
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+int producto (int n);
+void main(){
+	int n, p=0;
+	cout<<"Ingrese el limite de la serie: "<<endl;
+	cin>>n;
+	p=producto(n);
+	cout<<"El resultado del producto de la serie es: "<<p<<endl;
+	getch();
+}
+
+int producto (int n){
+	int s=1;
+	for (int i=1; i<=n; i++){
+		s=s*i;
+	}
+	return s;
+}
+//By Sebastian Morales (Nightmare598)
