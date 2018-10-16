@@ -1,0 +1,26 @@
+//Por Sebastian Morales Yabeta - DarkNight598
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int funcion(int x);
+
+void main()
+{
+	float x, r;
+	cout<<"Ingrese el numero del cual desea sumar sus digitos: ";
+	cin>>x;
+	r=funcion(x);
+	cout<<"La suma de los digitos de tu numero es: "<<r<<endl;
+	getch();
+}
+
+int funcion(int x){
+	int s=0;
+	while (x!=0){
+		s=s+(x%10);
+		x=x/10;
+	}
+	return s;
+}
+//Por Sebastian Morales Yabeta - DarkNight598
