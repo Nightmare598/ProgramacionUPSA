@@ -1,0 +1,54 @@
+//Por Sebastian Morales Yabeta - DarkNight598
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+float funcion(float x1, float x2, float x3, float y1, float y2, float y3);
+void main(){
+	float x1, x2, x3, y1, y2, y3, r;
+	cout<<"Ingrese los tres puntos de los vertices de su triangulo: "<<endl;
+	cout<<"Primer vertice (x1, y1): ";
+	cin>>x1>>y1;
+	cout<<"Segundo vertice (x2, y2): ";
+	cin>>x2>>y2;
+	cout<<"Tercer vertice (x3, y3): ";
+	cin>>x3>>y3;
+	r=funcion(x1, x2, x3, y1, y2, y3);
+	if (r==1)
+		cout<<"Es un triangulo rectangulo"<<endl;
+	else
+		cout<<"No es un triangulo rectangulo"<<endl;
+	getch();
+}
+
+float funcion(float x1, float x2, float x3, float y1, float y2, float y3){
+	float d1, d2, d3;
+	d1=sqrt((pow((x2-x1),2)+pow((y2-y1),2)));
+	d2=sqrt((pow((x3-x2),2)+pow((y3-y2),2)));
+	d3=sqrt((pow((x1-x3),2)+pow((y1-y3),2)));
+	float h, res;
+	if (d1>d2 && d1>d3){
+		h=d1;
+			if (h==sqrt(pow(d2,2)+pow(d3,2)))
+				res=1;
+			else
+				res=0;
+	}
+	else if (d2>d1 && d2>d3){
+		h=d2;
+			if (h==sqrt(pow(d1,2)+pow(d3,2)))
+				res=1;
+			else
+				res=0;
+	}
+	else{
+		h=d3;
+			if (h==sqrt(pow(d1,2)+pow(d2,2)))
+				res=1;
+			else
+				res=0;
+	}
+	return res;
+}
+//Por Sebastian Morales Yabeta - DarkNight598
