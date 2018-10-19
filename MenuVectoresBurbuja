@@ -1,0 +1,81 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+#define MAX 100
+
+using namespace std;
+
+void cargarvector (int vec[], int tam);
+void ordenarvectoras (int vec[], int tam);
+void ordenarvectordes (int vec[], int tam);
+void mostrarvector (int vec[], int tam);
+
+void main(){
+	
+		int n, vec[MAX], o;
+		char p;
+		do{
+			cout<<"Ingrese el numero de elementos del vector:"<<endl;
+			cin>>n;
+		}while(n>MAX||n<=0);
+		do{
+		cout<<"----------------------MENU----------------------"<<endl;
+		cout<<"1. Leer vector"<<endl;
+		cout<<"2. Ordenar vector (ascendente)"<<endl;
+		cout<<"3. Ordenar vector (descendente)"<<endl;
+		cout<<"4. Mostrar vector"<<endl;
+		cout<<"5. Salir"<<endl;
+		cout<<"-------------------------------------------------"<<endl<<endl;
+		cout<<"Si no ha cargado ningun vector, se mostrara un mensaje de error"<<endl;
+		cout<<"Elija una opcion:"<<endl;
+		cin>>o;
+		switch (o){
+		case 1: cargarvector(vec,n); getch(); break;
+		case 2: ordenarvectoras(vec,n); getch(); break;
+		case 3: ordenarvectordes(vec,n); getch(); break;
+		case 4: mostrarvector(vec,n); getch(); break;
+		default: cout<<"Opcion invalida"; getch(); break;
+		}
+		system("cls");
+		}while(o!=5);
+	getch();
+
+}
+
+void cargarvector (int vec[], int tam){
+	for(int i=0; i<tam; i++)
+	{	
+		cout<< "Ingrese un elemento de vec["<< i << "]=";
+		cin>> vec[i];
+	}
+}
+void ordenarvectoras (int vec[], int tam){
+	int temp, a;
+		for (int h=0; h<=tam-1;h++){
+			for (int k=h+1; k<tam; k++){
+				if(vec[h]>vec[k]){
+					temp=vec[k];
+					vec[k]=vec[h];
+					vec[h]=temp;
+				}
+			}
+		}
+}
+void ordenarvectordes (int vec[], int tam){
+	int temp, a;
+		for (int h=0; h<=tam-1;h++){
+			for (int k=h+1; k<tam; k++){
+				if(vec[h]<vec[k]){
+					temp=vec[k];
+					vec[k]=vec[h];
+					vec[h]=temp;
+				}
+			}
+		}
+}
+void mostrarvector (int vec[], int tam){
+	for(int i=0; i<=tam; i++)
+		cout<<vec[i];
+}
