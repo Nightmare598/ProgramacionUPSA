@@ -1,0 +1,35 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define MAX 100
+using namespace std;
+void cargarvector (float vec[], int tam);
+void arreglo (float vec[], int tam, float x);
+
+void main(){
+	int tam;
+	float vec[MAX], x;
+	cout<<"Ingrese el tamanio de su vector:"<<endl;
+	cin>>tam;
+	cout<<"Ingrese los elementos de su vector:"<<endl;
+	cargarvector(vec, tam);
+	cout<<"Ingrese el numero que desea buscar:";
+	cin>>x;
+	arreglo(vec, tam, x);
+	cout<<"Pulse Enter para salir";
+	getch();
+}
+
+void cargarvector (float vec[], int tam){
+	for(int i=0; i<tam; i++){
+		cout<<"Posicion "<<i<<":";
+		cin>>vec[i];
+	}
+}
+
+void arreglo (float vec[], int tam, float x){
+	for (int i=0; i<tam; i++)
+		if (vec[i]==x)
+			cout<<"Su valor se encuentra en la posicion "<<i<<endl;
+}
