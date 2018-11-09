@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+using namespace std;
+
+bool palindromo(string cadena);
+
+void main(){
+	string cadena;
+	bool r;
+	cout<<"Ingrese la frase: "<<endl;
+	getline(cin, cadena);
+	r=palindromo(cadena);
+	if (r==true)
+		cout<<"La frase SI ES palindromo";
+	else
+		cout<<"La frase NO ES palindromo";
+	getch();
+}
+
+bool palindromo(string cadena){
+	bool r=false;
+	for(int i=0; i<cadena.length(); i++){
+		if (cadena[i]==cadena[cadena.length()-1-i])
+			return true;
+		else 
+			return r;
+	}
+}
