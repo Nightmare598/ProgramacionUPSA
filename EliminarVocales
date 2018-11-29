@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void eliminar(string cadena, int tam);
+
+void main(){
+	string cadena;
+	int tam;
+	cout<<"Ingrese una frase a la cual desea eliminar vocales: "<<endl;
+	getline(cin, cadena);
+	tam=cadena.length();
+	cout<<"Su frase sin vocales es: "<<endl;	
+	eliminar(cadena, tam);
+	getch();
+}
+void eliminar (string cadena, int tam){
+	char j=' ';
+	for(int i=0; i<tam; i++)
+		if (cadena[i]=='a'||cadena[i]=='e'||cadena[i]=='i'||cadena[i]=='o'||cadena[i]=='u')
+			cadena[i]=j;
+	for(int k=0; k<cadena.length(); k++)
+		cout<<cadena[k];
+}
